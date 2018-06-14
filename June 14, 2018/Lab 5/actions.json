@@ -1,0 +1,271 @@
+{
+    "manifest": {
+        "displayName": "Welcome",
+        "invocationName": "Welcome",
+        "category": "PRODUCTIVITY"
+    },
+    "actions": [
+        {
+            "name": "com.example.actions.welcome",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "com.example.intents.welcome",
+                "trigger": {
+                    "queryPatterns": [
+			"Talk to (Samsung)? ARTIK",
+			"Hello Samsung",
+			"Hello ARTIK",
+			"Hi (Samsung)? ARTIK"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Welcome to Samsung ARTIK booth. What do you want to know about ARTIK? "
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }, 
+	{
+            "name": "com.example.actions.overview",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "com.example.intents.overview",
+                "trigger": {
+                    "queryPatterns": [
+			"What is Samsung ARTIK",
+			"What is ARTIK",
+			"What is (Samsung)? ARTIK IoT Platform",
+			"Tell me about ARTIK"
+                    ]
+                }
+            },
+	     "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Samsung ARTIK is an integrated, secure, end-to-end IoT platform which includes system-on-modules, cloud services, software, and edge-to-cloud security."
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+	}, 
+	{
+            "name": "com.example.actions.processor",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "com.example.intents.processor",
+                "trigger": {
+                    "queryPatterns": [
+                        "What is ARTIK 530s?",
+			"What kind of ARTIK hardware are you using?",
+			"What are the ARTIK hardware spec?"
+                    ]
+                }
+             },
+	    "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "The ARTIK 530s is a system-on-module with a 4 core ARM Cortex A9 processor, running at 1.2 GHz. The 530s system-on-module has 4 gigabytes of flash and 1 gigabytes of RAM, and supports WiFi, ZigBee, Thread, Bluetooth" 
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+	},
+	{
+            "name": "com.example.actions.demo",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+	     "intent": {
+                "name": "com.example.intents.demo",
+                "trigger": {
+                    "queryPatterns": [
+                        "What are you demoing?",
+                        "What are you showing?",
+                        "What is going on?",
+			"What is this demo?",
+			"Tell me about this demo."
+                    ]
+                }
+             },
+	      "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "We are showcasing Google Assistant running on a Samsung ARTIK 530s system-on-module.Samsung ARTIK is a complete IoT platform for enterprise produce development."
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+	},
+        {
+            "name": "com.example.actions.usecase",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+	     "intent": {
+                "name": "com.example.intents.usecase",
+                "trigger": {
+                    "queryPatterns": [
+                        "What can you do with ARTIK?",
+                        "What are the use cases?"
+                    ]
+                }
+             },
+	       "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "We are working on different verticles. Some of the use cases for 530s are factory automation, smart home gateway, building automation controllers, multimedia applications"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {   
+            "name": "com.example.actions.security",
+            "availability": {
+                "deviceClasses": [
+                    {   
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+	    "intent": {
+                "name": "com.example.intents.security",
+                "trigger": {
+                    "queryPatterns": [
+                       "What are the security features?"
+                    ]
+                }
+             },
+             "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "ARTIK system on modules offer hardware root of trust, secure boot, protected communication, secure updates, secure storage, mutual authentication with SmartThings Cloud"
+                                }
+                            }
+                        ]
+                    }
+                }
+	     }
+	},
+	{
+            "name": "com.example.actions.relationship",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "com.example.intents.relationship",
+                "trigger": {
+                    "queryPatterns": [
+                       "What is the relationship between SmartThings and ARTIK IoT platform?",
+		       "What is the difference between SmartThings and ARTIK IoTplatform?"
+                    ]
+                }
+             },
+	     "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "SmartThings is Samsung's global name for all its IoT technology offerings. As such, the ARTIK platform is part of the larger SmartThings feature set"
+                                }
+                            }
+                        ]
+                    }
+                }
+             }
+	},
+	{  
+            "name": "com.example.actions.artikcloud",
+            "availability": {
+                "deviceClasses": [
+                    {  
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "com.example.intents.artikcloud",
+                "trigger": {
+                    "queryPatterns": [
+                       "What are ARTIK Cloud Services?"
+                    ]
+                }
+             },
+	     "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "ARTIK Cloud services are being integrated into the larger SmartThings Cloud. ARTIK cloud services include easy onboarding of ARTIK System on modules, over the air software updates, management, secure communications and mutual authentication between System on modules and the cloud"
+                                }
+                            }
+                        ]
+                    }
+                }
+             }  
+        }
+    ]
+}
